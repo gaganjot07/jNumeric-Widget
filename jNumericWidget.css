@@ -1,0 +1,56 @@
+span.j-wrapper {
+	width: 100%;
+	height: 100%;
+	padding: 2px;
+	box-sizing: border-box;
+}
+
+button.j-btn {
+	padding: 0;
+    border: 1px solid #cccccc;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input.j-num-box {
+	padding: 0;
+	border: 1px solid #cccccc;
+	outline: none;
+    text-align: center;
+}
+
+/* horizontal css */
+span.j-wrapper.j-horizontal {
+	display: inline-block;
+}
+
+span.j-wrapper.j-horizontal button.j-btn {
+	width: 30%;
+	height: 100%;
+}
+
+span.j-wrapper.j-horizontal input.j-num-box {
+	width: calc(40% - 6px);
+	height: calc(100% - 2px);
+	margin: 0 2px;
+}
+
+/* end horizontal css */
+
+/* vertical css */
+span.j-wrapper.j-vertical {
+	display: inline-block;
+    text-align: center;
+}
+
+span.j-wrapper.j-vertical button.j-btn{
+	width: 65%;
+    height: 35%;
+}
+
+span.j-wrapper.j-vertical input.j-num-box {
+    width: calc(90% - 2px);
+    margin: 2px 0;
+    height: calc(30% - 4px);
+}
+/* end vertical css */

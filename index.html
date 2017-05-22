@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Widget - Default functionality</title>
+  <link rel="stylesheet" type="text/css" href="jNumericWidget.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="jNumericWidget.js"></script>
+  <style type="text/css">
+  	#testControls {
+  		margin-top: 100px;
+  	}
+  	.widgetContainer.horizontal {
+  		width: 60%;
+    	height: 30px;
+  	}
+
+  	.widgetContainer.vertical{
+	    width: 90px;
+	    height: 150px;
+	}
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var jNum = $( ".abc" ).jNumericWidget({
+        orientation: "horizontal",
+        decimals: 6,
+        value: 10,
+        step: 5,
+        minValue: -7,
+        maxValue: 23
+          //color: "orange"
+      });
+      console.log(jNum);
+      $(".changeOrientation").click(function() {
+      	if (jNum.settings.orientation === "horizontal") {
+      		$(".widgetContainer").removeClass("horizontal").addClass("vertical");
+      		jNum.changeOrientation("vertical");
+      	}
+      	else {
+      		$(".widgetContainer").removeClass("vertical").addClass("horizontal");
+      		jNum.changeOrientation("horizontal");
+      	}
+      })
+    });
+    
+  </script>
+</head>
+<body>
+<div class="widgetContainer horizontal">
+	<input type="text" class="abc" />	
+</div>
+
+<div id="testControls">
+	<button class="changeOrientation">Change Orientation</button>
+</div>
+</body>
+</html>

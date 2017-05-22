@@ -7,7 +7,7 @@
         	VERTICAL: "vertical"
         },
         settings = $.extend({
-            // These are the defaults.
+            // These are the default settings.
             orientation: orientationOpts.HORIZONTAL,
             step: 1,
             decimals: 0,
